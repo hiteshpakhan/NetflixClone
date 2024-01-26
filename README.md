@@ -1,4 +1,4 @@
-git repo for example: https://github.com/nikhilgugwad/Netflix-Clone.git
+<!-- git repo for example: https://github.com/nikhilgugwad/Netflix-Clone.git -->
 
 
 
