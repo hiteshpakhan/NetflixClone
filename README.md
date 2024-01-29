@@ -25,3 +25,7 @@ dependencies installed
     npm i react-router-dom
     npm i firebase
     npm install -g firebase-tools 
+        - then we havedeployed the project on firebase by some firebase commands
+    npm build
+    npm i -D @reduxjs/toolkit
+    npm i react-redux
