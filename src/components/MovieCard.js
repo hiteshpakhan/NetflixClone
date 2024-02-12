@@ -2,6 +2,8 @@ import React from 'react'
 import { IMG_CDN_URL } from "../utils/constants";
 
 const MovieCard = ({ posterPath }) => {  
+
+  //if the poster image path is not present then skip it and dont show
   if (!posterPath) return null;
   
   return (

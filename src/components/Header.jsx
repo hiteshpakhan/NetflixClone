@@ -59,10 +59,10 @@ const Header = () => {
   }
 
   return (
-    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
-      <img className='w-44' src={nlogo} alt='logo-netflix' />
+    <div className='absolute w-screen px-3 md:px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between'>
+      <img className='w-44 mx-auto md:mx-0' src={nlogo} alt='logo-netflix' />
       { user && (
-        <div className='flex p-2'>
+        <div className='flex p-2 justify-between'>
           {showGptSearch && <select className="p-2 m-2 bg-gray-900 text-white rounded-md shadow-md" onChange={ handleLanguageChange }>
             {
               SUPPORTED_LANG.map(lang => <option key={lang.identifier} value={lang.identifier}>

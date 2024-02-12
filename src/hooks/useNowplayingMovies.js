@@ -1,11 +1,13 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addNowPlayingMovies } from "../utils/moviesSlice";
 import { API_OPTIONS } from "../utils/constants";
 
 
 const useNowPlayingMovies = () => {
     const dispatch = useDispatch();
+
+    const nowPlayingMovies = useSelector(store => store.movies.nowPlayingMovies);
 
       const getNowMoviesPlaying = async () => {
         const data = await fetch(
@@ -17,7 +19,7 @@ const useNowPlayingMovies = () => {
       };
 
       useEffect(() => {
-        getNowMoviesPlaying();
+        !nowPlayingMovies && getNowMoviesPlaying();   //this is an if statement if the nowplayingmovies is empty then only make this api calls 
       }, [])
 
 };
